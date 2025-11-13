@@ -6,7 +6,6 @@ Projeto desenvolvido em **Spring Boot** e **Java 17**, na qual foram implementad
 
 ## 🚀 Tecnologias utilizadas
 
-
 - 🗃️ **Banco de dados H2**
 - 📄 **DTOs** para transferência de dados
 - 📆 **Java Time (LocalDate, Instant, ZoneId)**
@@ -42,6 +41,46 @@ Os endpoints `/sales/report` e `/sales/summary` aceitam **parâmetros opcionais*
 
 ---
 ---
+
+# 💰 Sales Report — Sales Report and Summary
+
+Project developed using Spring Boot and Java 17, where query functions were implemented in a relational database with the goal of generating sales reports and summaries by seller.
+
+---
+
+## 🚀 Technologies Used
+
+🗃️ H2 Database
+📄 DTOs for data transfer
+📆 Java Time (LocalDate, Instant, ZoneId)
+🌙 Insomnia
+
+| Type                           | Description                                          | Endpoint             |
+| ------------------------------ | ---------------------------------------------------- | -------------------- |
+| 🔍 **Find Sale by ID**         | Returns summarized information for a specific sale.  | `GET /sales/{id}`    |
+| 📊 **Sales Report**            | Lists sales filtered by date and seller name.        | `GET /sales/report`  |
+| 📈 **Sales Summary by Seller** | Returns the total amount of sales grouped by seller. | `GET /sales/summary` |
+
+---
+
+| Parameter | Type                  | Description                                       |
+| --------- | --------------------- | ------------------------------------------------- |
+| `minDate` | `String (yyyy-MM-dd)` | Minimum date of the search interval.              |
+| `maxDate` | `String (yyyy-MM-dd)` | Maximum date of the search interval.              |
+| `name`    | `String`              | (Only in `/report`) Filters by the seller’s name. |
+
+---
+
+**In this code, the addition of two-step queries optimizes database access and prevents the ''N + 1'' problem.**
+
+🕒 **Default Date Behavior:**
+
+If no parameter is provided, the system considers the last 12 months up to the current date.
+
+Example: if today is 2025-11-12, the default interval will be from 2024-11-12 to 2025-11-12.
+
+
+
 
 
 
