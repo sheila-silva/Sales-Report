@@ -7,8 +7,7 @@ Projeto desenvolvido em **Spring Boot** e **Java 17**, na qual foram implementad
 ## 🚀 Tecnologias utilizadas
 
 - 🗃️ **Banco de dados H2**
-- 📄 **DTOs** para transferência de dados
-- 📆 **Java Time (LocalDate, Instant, ZoneId)**
+- 📄 **Maven**
 - 🌙 **Insômnia**
 
 ---
@@ -50,10 +49,9 @@ Project developed using Spring Boot and Java 17, where query functions were impl
 
 ## 🚀 Technologies Used
 
-🗃️ H2 Database
-📄 DTOs for data transfer
-📆 Java Time (LocalDate, Instant, ZoneId)
-🌙 Insomnia
+🗃️ **H2 Database**
+📄 **Maven**
+🌙 **Insomnia**
 
 | Type                           | Description                                          | Endpoint             |
 | ------------------------------ | ---------------------------------------------------- | -------------------- |
