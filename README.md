@@ -49,9 +49,9 @@ Project developed using Spring Boot and Java 17, where query functions were impl
 
 ## 🚀 Technologies Used
 
-🗃️ **H2 Database**
-📄 **Maven**
-🌙 **Insomnia**
+🗃️ **H2 Database**  
+📄 **Maven**  
+🌙 **Insomnia**  
 
 | Type                           | Description                                          | Endpoint             |
 | ------------------------------ | ---------------------------------------------------- | -------------------- |
