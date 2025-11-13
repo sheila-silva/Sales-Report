@@ -33,7 +33,7 @@ Os endpoints `/sales/report` e `/sales/summary` aceitam **parâmetros opcionais*
 | `maxDate` | `String (yyyy-MM-dd)` | Data máxima do intervalo de busca. |
 | `name` | `String` | (Apenas em `/report`) Filtra pelo nome do vendedor. |
 
-<span style="color:green">Neste código a adição das queries em duas etapas otimiza consultas no banco de dados evitando o problema ''N + 1''.</span>
+**Neste código a adição das queries em duas etapas otimiza consultas no banco de dados evitando o problema ''N + 1''.**
 
 🕒 **Comportamento padrão das datas:**
 - Se **nenhum parâmetro** for informado, o sistema considera o **intervalo dos últimos 12 meses** até a data atual.
