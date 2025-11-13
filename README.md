@@ -1,7 +1,6 @@
 # 💰 Sales Report — Relatório e Sumário de Vendas
 
-Projeto desenvolvido em **Spring Boot** e **Java 17**, na qual foram implementadas funções de consulta com o objetivo de gerar **relatórios e resumos de vendas por vendedor**, 
-em um **banco de dados relacional com Spring Data JPA**. 
+Projeto desenvolvido em **Spring Boot** e **Java 17**, na qual foram implementadas funções de consulta no **banco de dados relacional** com o objetivo de gerar **relatórios e resumos de vendas por vendedor**.  
 
 ---
 
@@ -35,17 +34,14 @@ Os endpoints `/sales/report` e `/sales/summary` aceitam **parâmetros opcionais*
 | `maxDate` | `String (yyyy-MM-dd)` | Data máxima do intervalo de busca. |
 | `name` | `String` | (Apenas em `/report`) Filtra pelo nome do vendedor. |
 
+**Neste código a adição das queries em duas etapas otimiza consultas no banco de dados evitando o problema ''N + 1''.**
+
 🕒 **Comportamento padrão das datas:**
 - Se **nenhum parâmetro** for informado, o sistema considera o **intervalo dos últimos 12 meses** até a data atual.
 - Exemplo: se hoje for `2025-11-12`, o intervalo padrão será de `2024-11-12` a `2025-11-12`.
 
 ---
-
-## 🧮 Exemplos de uso
-
-### 🔹 1. Buscar relatório completo (últimos 12 meses)
-
 ---
 
-Neste código a adição das queries em duas etapas otimiza consultas no banco de dados evitando o problema ''N + 1''. 
+
 
