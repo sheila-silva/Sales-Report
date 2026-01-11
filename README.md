@@ -206,13 +206,158 @@ Quando os parâmetros de data não são informados:
 <br>
 <br>
 
----
 
 🚀 **Tecnologias utilizadas**
 
 - 🗃️ Banco de dados H2
 - 📄 Maven
 - 🌙 Insômnia
+
+<br>
+<br>
+
+
+**Guia de Instalação e Uso**
+
+⚙️ **Como Executar o Projeto**
+
+📋 Pré-requisitos
+
+☕ Java JDK 17+
+🐘 PostgreSQL 12+
+📦 Maven 3.8+
+
+<br>
+<br>
+
+🎯 **Instalação**
+1. Clone o repositório
+````
+git clone https://github.com/seu-usuario/book-catalog.git
+````
+2.Configure o banco de dados
+3.Configure as variáveis de ambiente
+4.Execute a aplicação
+````
+mvn spring-boot:run
+````
+5.Acesse: http://localhost:8080
+
+6.Teste os endpoints
+
+<br>
+
+**Endpoints disponíveis**
+<br>
+
+1. Buscar venda por ID
+GET /sales/{id}
+
+
+Exemplo:
+
+GET http://localhost:8080/sales/1
+
+
+Retorno:
+
+ID da venda
+
+Valor
+
+Data da venda
+
+<br>
+<br>
+
+**Relatório de vendas com filtros**
+<br>
+GET /sales/report
+
+
+Parâmetros opcionais:
+
+minDate → data inicial (yyyy-MM-dd)
+
+maxDate → data final (yyyy-MM-dd)
+
+name → nome (ou parte do nome) do vendedor
+
+page, size, sort → paginação
+
+Exemplo:
+
+GET http://localhost:8080/sales/report?minDate=2024-01-01&maxDate=2024-12-31&name=joao
+
+
+Funcionalidades:
+
+Filtra vendas por intervalo de datas
+
+Filtra por nome do vendedor (case-insensitive)
+
+Retorna dados paginados
+
+Retorna apenas os campos necessários para relatórios
+
+<br>
+<br>
+
+**Resumo de vendas por vendedor**
+<br>
+GET /sales/summary
+
+
+Parâmetros opcionais:
+
+minDate
+
+maxDate
+
+Paginação padrão do Spring
+
+Exemplo:
+
+GET http://localhost:8080/sales/summary?minDate=2024-01-01&maxDate=2024-12-31
+
+
+Retorno:
+
+Nome do vendedor
+
+Valor total vendido no período
+
+<br>
+<br>
+
+**Observações importantes**
+
+Caso as datas não sejam informadas, a API assume automaticamente:
+
+Data final: data atual
+
+Data inicial: um ano antes da data final
+
+Todos os endpoints retornam respostas no formato JSON
+
+<br>
+<br>
+
+# Agradecimentos / Referências 
+
+Devsuperior - Escola de programação
+
+<br>
+
+
+----------
+
+
+# Autora:
+
+Sheila M. M. L. Silva 
+
+https://www.linkedin.com/in/sheilasheila/
 
 
 
