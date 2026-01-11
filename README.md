@@ -1,6 +1,11 @@
 # 💰 Sales Report — Relatório e Sumário de Vendas
 
-Projeto desenvolvido em **Spring Boot** e **Java 17**, na qual foram implementadas funções de consulta no **banco de dados relacional** com o objetivo de gerar **relatórios e resumos de vendas por vendedor**.  
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)
+
+O DSMeta é uma API REST desenvolvida com Spring Boot cujo objetivo é fornecer consultas otimizadas de vendas, incluindo relatórios detalhados e resumos agregados por vendedor. O projeto aplica boas práticas de desenvolvimento backend, com foco em performance de consultas, separação de responsabilidades e uso eficiente do Spring Data JPA.
+
+A aplicação é estruturada para atender cenários comuns de sistemas corporativos, como filtros por período, paginação, relatórios analíticos e consultas agregadas, sendo um exemplo de API orientada a dados.
+
 
 ---
 
